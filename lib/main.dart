@@ -1,3 +1,5 @@
+import 'package:assignment4_contact_app/common/app_theme.dart';
+import 'package:assignment4_contact_app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,9 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-    
-      
+      theme:AppTheme.theme,
+      home:  HomeScreen(),
     );
   }
 }
