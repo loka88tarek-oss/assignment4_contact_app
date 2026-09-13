@@ -1,6 +1,7 @@
 import 'package:assignment4_contact_app/common/app_colors.dart';
 import 'package:assignment4_contact_app/widgets/text_field_modsl_sheet.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:lottie/lottie.dart';
 
 class FloatingActionButtonHomeScreen extends StatelessWidget {
@@ -42,8 +43,13 @@ class FloatingActionButtonHomeScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20),
                             border: Border.all(color: AppColors.gold),
                           ),
-                          child: Lottie.asset(
-                            "assets/jsons/image_picker.json",
+                          child: GestureDetector(
+                            onTap: () {
+                              
+                            },
+                            child: Lottie.asset(
+                              "assets/jsons/image_picker.json",
+                            ),
                           ),
                         ),
                         SizedBox(width: size.width * 0.02),
@@ -59,7 +65,9 @@ class FloatingActionButtonHomeScreen extends StatelessWidget {
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
-                            Divider(color: AppColors.gold, thickness: 5),
+                            SizedBox(
+                              width:size.width*.5,
+                              child: Divider(color: AppColors.gold, thickness: 1)),
                             Text(
                               "example@email.com",
                               style: TextStyle(
@@ -68,7 +76,9 @@ class FloatingActionButtonHomeScreen extends StatelessWidget {
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
-                            Divider(color: AppColors.gold, thickness: 1),
+                            SizedBox(
+                              width:size.width*.5,
+                              child: Divider(color: AppColors.gold, thickness: 1)),
                             Text(
                               "+200000000000",
                               style: TextStyle(
@@ -77,7 +87,9 @@ class FloatingActionButtonHomeScreen extends StatelessWidget {
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
-                            Divider(color: AppColors.gold, thickness: 1),
+                            SizedBox(
+                              width:size.width*.5,
+                              child: Divider(color: AppColors.gold, thickness: 1)),
                           ],
                         ),
                       ],
@@ -114,5 +126,5 @@ class FloatingActionButtonHomeScreen extends StatelessWidget {
       child: Icon(Icons.add, color: AppColors.darkBlue, size: 30),
     );
   }
-}
 
+}
