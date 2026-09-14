@@ -1,15 +1,26 @@
+import 'dart:io';
+
 import 'package:assignment4_contact_app/common/app_assets.dart';
 import 'package:assignment4_contact_app/common/app_colors.dart';
 import 'package:assignment4_contact_app/widgets/floating_action_button_home.dart';
 
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:lottie/lottie.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+ 
+
+  @override
   Widget build(BuildContext context) {
+   
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
@@ -38,6 +49,8 @@ class HomeScreen extends StatelessWidget {
    
     );
   }
+ 
+
 }
 
 
